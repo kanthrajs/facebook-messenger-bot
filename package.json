@@ -1,0 +1,30 @@
+{
+  "name": "messenger-bot",
+  "version": "1.0.0",
+  "description": "A simple yet intuitive messenger bot helps to do several things with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanthrajs/facebook-messenger-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "facebook",
+    "messenger",
+    "intuitive"
+  ],
+  "author": "Kanthraj S",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kanthrajs/facebook-messenger-bot/issues"
+  },
+  "homepage": "https://github.com/kanthrajs/facebook-messenger-bot#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}
