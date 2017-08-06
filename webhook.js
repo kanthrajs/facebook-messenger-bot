@@ -1,6 +1,8 @@
 'use strict';
-const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-const APIAI_TOKEN = process.env.APIAI_TOKEN;
+const config  =  require('./config.js');
+
+const PAGE_ACCESS_TOKEN = config.PAGE_ACCESS_TOKEN;
+const APIAI_TOKEN = config.APIAI_TOKEN;
 
 
 const express = require('express');
@@ -41,26 +43,7 @@ app.post('/webhook', (req, res) => {
   }
 });
 
-// function sendMessage(event) {
-//   let sender = event.sender.id;
-//   let text = event.message.text;
 
-//   request({
-//     url: 'https://graph.facebook.com/v2.6/me/messages',
-//     qs: {access_token: 'EAAP4kcftyVABAFLIL9763iJ2Rh8npYH2T5Ld9xYqD1ia57CuqRb1bnyt4kpkSiVV8zXJIOXsf6S3pXh05rZCxyXSDZBiWatgUR02xMO27lgT2XUMWINoqrldRipXi6wRQMsGjMj7MyuNiIZAPuHqRLxgHNgXWudozf8VApoLQZDZD'},
-//     method: 'POST',
-//     json: {
-//       recipient: {id: sender},
-//       message: {text: text}
-//     }
-//   }, function (error, response) {
-//     if (error) {
-//         console.log('Error sending message: ', error);
-//     } else if (response.body.error) {
-//         console.log('Error: ', response.body.error);
-//     }
-//   });
-// }
 
 function sendMessage(event) {
   let sender = event.sender.id;
